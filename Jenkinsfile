@@ -25,13 +25,13 @@ pipeline {
             }
         stage('Test'){
             steps{
-                sh "mvn test"
+               sh 'echo "The environment variable is ${SERVICE_BRANCH}"'
              }
         }
     }
     post { 
         always { 
-            junit '**/target/surefire-reports/TEST-com.microdegree.AppTest.xml'
+           sh 'echo "The environment variable is ${SERVICE_BRANCH}"'
         }
     }
 }

@@ -19,7 +19,7 @@ pipeline {
         stage('compile and build'){
           
             steps{
-                sh "mvn clean install"
+                
                 sh 'echo "The environment variable is ${SERVICE_BRANCH}"'
                 }
             }

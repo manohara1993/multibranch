@@ -25,13 +25,13 @@ pipeline {
             }
         stage('Test'){
             steps{
-               sh 'echo "The environment variable is ${SERVICE_BRANCH}"'
+              echo "The environment variable is"
              }
         }
     }
     post { 
         always { 
-           sh 'echo "The environment variable is ${SERVICE_BRANCH}"'
+           echo "The environment variable is"
         }
     }
 }
